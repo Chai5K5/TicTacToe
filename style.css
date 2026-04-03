@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+}
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 7rem;
+}
+.game {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    height : 200px;
+    width : 200px;
+    background-color: black;
+    color: white;
+}
+.game div {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    align-items: center;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+.disabledBox {
+    pointer-events: none;
+}
