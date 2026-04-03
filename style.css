@@ -1,28 +1,160 @@
 body {
-    text-align: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+h1 {
+    margin-top: 20px;
+}
+
+/* Layout */
 .container {
-    display: grid;
-    grid-template-columns: auto auto;
-    margin-left: 7rem;
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
 }
+
+/* Game Board */
 .game {
     display: grid;
-    grid-template-columns: auto auto auto;
-    text-align: center;
-    height : 200px;
-    width : 200px;
-    background-color: black;
-    color: white;
+    grid-template-columns: repeat(3, 80px);
+    gap: 8px;
+    background: #222;
+    padding: 10px;
+    border-radius: 12px;
+    max-height: 16rem;
+    margin-top: 4rem;
 }
-.game div {
+
+/* Boxes */
+.box {
+    width: 80px;
+    height: 80px;
+    background: #333;
     display: flex;
     justify-content: center;
-    padding: 5px;
     align-items: center;
-    border: 1px solid white;
-    box-sizing: border-box;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.2s;
 }
+
+.box:hover {
+    background: #444;
+}
+
+/* Disable clicks */
 .disabledBox {
     pointer-events: none;
+    opacity: 0.6;
+}
+
+/* Lobby Panel */
+.lobby {
+    background: #1e1e1e;
+    padding: 10px;
+    margin: 0px;
+    border-radius: 12px;
+    min-width: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.lobby h2 {
+    margin: 0px;
+}
+
+/* Sections */
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    margin: 0px;
+}
+
+/* Input row */
+.input-row {
+    display: flex;
+    margin-bottom: 4px;
+    gap: 8px;
+}
+
+.input-row input {
+    flex: 1;
+    padding: 6px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+/* Buttons */
+button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #333;
+    color: white;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #555;
+}
+
+/* Emoji Choices */
+.choices {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.choice {
+    font-size: 1.5rem;
+    padding: 8px;
+    background: #2a2a2a;
+}
+
+.choice.selected {
+    background: #4cc9f0;
+    color: black;
+}
+
+/* Result */
+.win-lose {
+    text-align: center;
+    padding: 10px;
+    margin-top: 5px;
+    background: #2a2a2a;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Score */
+.score {
+    background: #2a2a2a;
+    padding: 10px;
+    margin-top: 5px;
+    padding-top: 0px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+p {
+    margin: 0.4rem;
+    padding: 0;
+}
+
+/* Controls */
+.controls {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
 }
